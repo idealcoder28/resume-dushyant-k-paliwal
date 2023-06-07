@@ -1,0 +1,271 @@
+*,::after,::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+html{
+    scroll-behavior: smooth ;
+}
+
+a{
+    text-decoration: none;
+    outline: none;
+}
+
+body{
+    background-color: #03001c;
+    color: #0e8388;
+}
+
+
+h1,h2{
+    font-family: 'Abril Fatface', cursive;
+    color: white;
+    font-size: 4rem;
+    font-weight: 700;
+}
+.portfolio-container{
+    max-width: 1140px;
+    margin: 0%;
+    padding: 0 1%;
+}
+
+.portfolio-row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header{
+    position: absolute;
+    padding: 0;
+    left: 0%;
+    right: 0%;
+    z-index: 10;
+    background-color: #301e67;
+}
+
+header .portfolio-row.header-wrap{
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brandname a{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: skyblue;
+    font-family: 'Tilt Prism', cursive;
+    font-family: 'Abril Fatface', cursive;
+}
+
+.hamburger i {
+    font-size: 20px;
+    background-color: white;
+    color: skyblue;
+    display: none;
+    height: 30px;
+    width: 35px;
+    text-align: center;
+}
+
+.portfolio-navbar ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.portfolio-navbar ul li{
+    display: inline;
+    margin-left: 35px;
+}
+
+.portfolio-navbar ul li a{
+    font-size: 1rem;
+    line-height: 72px;
+    font-weight: 600;
+    color: skyblue;
+    position: relative;
+    font-family: 'Slabo 27px', serif;
+    text-transform: uppercase;
+}
+
+.slider{
+    position: relative;
+    padding: 150px 0px 50px 0px;
+    background-color: #301e67;
+}
+
+.slider-content{
+    align-items: center !important;
+}
+
+.slider-general{
+    flex: 0 0 auto;
+    width: 60%;
+}
+
+.slider-general .welcome-msg{
+    font-family: 'Abril Fatface', cursive;
+    color: skyblue;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+.welcome-text h1{
+    display: inline;
+}
+
+.slider-general p{
+    line-height: 30px;
+    padding-right: 26%;
+    font-family: 'Abril Fatface', cursive;
+    color: skyblue;
+
+}
+
+.text-wrap{
+    position: relative;
+    display: inline-flex;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.main-title{
+    -webkit-text-stroke: 1px skyblue;
+    -webkit-text-fill-color: transparent;
+}
+
+.main-title,.hover-title{
+    transition: .5s cubic-bezier(0.51,0.57,.17,1);
+     
+}
+
+.hover-title{
+    color: skyblue;
+    position: absolute;
+    transform: translate3d(0,100%,0);
+} 
+
+.text-wrap:hover .main-title{
+    transform: translate3d(0, -100%, 0);
+    transition-delay: 0.1s;
+}
+
+.text-wrap:hover .hover-title{
+    transform: translate3d(0 , 0 , 0);
+
+}
+
+.download-resume a{
+    display: inline-block;
+    margin-top: 15px;
+    padding: 15px 30px;
+    transition: ease all 0.35s;
+    color: skyblue;
+    font-family: 'Abril Fatface', cursive;
+    background-color: red;
+    position: relative;
+    z-index: 1001;
+}
+
+.download-resume a::before {
+    background-color: burlywood;
+}
+
+.download-resume a::before {
+    top: 0;
+    width: 0;
+    left: auto;
+    right: 0;
+    z-index: -1;
+    bottom: 0;
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+}
+
+.download-resume a:hover::before {
+    left: 0;
+    width: 100%;
+    right: auto;
+}
+
+
+.slider-image{
+    flex: 0 0 auto;
+    width: 40%;
+}
+
+.welcome-image img{
+    max-height: 500px;
+    width: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+}
+
+.slider-image .welcome-image {
+    position: relative;
+    z-index: 2;
+    transition-duration: 0.4s;
+}
+ 
+.slider-image .welcome-image::before{
+    content: "";
+    width: calc(50% +10px);
+    height: calc(50% + 10px);
+    right: -10px;
+    bottom: -10px;
+    z-index: -1;
+    transition: all 0.7s;
+    background: linear-gradient(to right, blue , red, green);
+}
+
+#contact{
+    background-color: aliceblue;
+    padding: 100px;
+    text-align: center;
+}
+
+.contact-info{
+    margin: 30px 0;
+}
+
+.contact-info span,.contact-info a{
+    color: aqua;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contact-info h3{
+    color: skyblue;
+    transition: all 0.3s ease-out 0s;
+     cursor: pointer;
+}
+
+.social-link li{
+    display: inline-block;
+    margin: 5px 10px;
+}
+
+.social-link li a {
+    color: skyblue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     transition: all 0.3s ease-out 0s;
+}
+
+.contact-info h3:hover, .social-link li a:hover{
+  color:white;
+}
+
+
+@media screen and (max-width: 700px){
+     h1,h2{
+        font-size:3rem;
+
+     }
+     header{
+        padding: 15px;
+        position: fixed;
+        background-color: white;
+     }
+}
